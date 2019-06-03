@@ -13,4 +13,4 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['postgresql://u8jw7b2dhxlyszvnlmwu:NIGprEac6mdF4OnaFU1M@bi6mpncrmvzaxsodairu-postgresql.services.clever-cloud.com:5432/bi6mpncrmvzaxsodairu'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
