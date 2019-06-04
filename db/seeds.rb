@@ -41,8 +41,8 @@ nicolas = User.create!(email: 'Nicolas.Goarant@hotmail.fr', password: "secret", 
 nathan = User.create!(email: 'NathanMenard.work@gmail.com', password: "secret", first_name: 'Nathan', last_name: 'Menard')
 maella = User.create!(email: 'mdegras@myrezapp.com', password: "secret", first_name: 'Maella', last_name: 'Degras')
 
-nathan_pool = Pool.create!(user: nathan, title: 'A pool closed for all your family', description: 'nice pool for all the family', heated: false, picture: 'src', daily_price: 15)
-maella_pool = Pool.create!(user: maella, title: 'A great pool closed to the forest', description: 'a sunny pool with a great barbecue', heated: true, picture: 'src.', daily_price: 20)
+nathan_pool = Pool.create!(user: nathan, title: 'A pool closed for all your family', description: 'nice pool for all the family', heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/piscine1.jpg')), daily_price: 15)
+maella_pool = Pool.create!(user: maella, title: 'A great pool closed to the forest', description: 'a sunny pool with a great barbecue', heated: true, picture: File.open(Rails.root.join('db/fixtures/pools/pool.jpg')), daily_price: 20)
 
 
 starting_date_booking1 = DateTime.now + 3
