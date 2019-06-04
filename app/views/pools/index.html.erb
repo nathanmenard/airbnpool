@@ -1,0 +1,82 @@
+<div class='container'>
+  <h1>Discover plenty of amazing pools</h1>
+  <div class='cards'>
+    <% @pools.each do |pool|  %>
+      <div class="card-pool">
+        <%= link_to pool_path(pool) do %>
+          <img src="https://www.homestratosphere.com/wp-content/uploads/2018/09/backyard-swimming-pool-picture2018-09-12-at-10.31.31-AM-11.jpg", height="200px">
+        <% end %>
+        <div class="card-pool-infos">
+          <div>
+            <div>
+              <h2><%= pool.title %></h2>
+              <p><i class="far fa-user"></i> <%= pool.user %></p>
+            </div>
+            <h3 class="card-pool-price"><%= pool.daily_price %></h2>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+      <div class="cards">
+          <div class="card-pool">
+              <img src="https://www.homestratosphere.com/wp-content/uploads/2018/09/backyard-swimming-pool-picture2018-09-12-at-10.31.31-AM-11.jpg", height="200px">
+            <div class="card-pool-infos">
+              <div>
+                <div>
+                  <h2>Super piscine dans beau jardin arboré</h2>
+                  <p><i class="far fa-user"></i> Francis P.</p>
+                </div>
+                <h3 class="card-pool-price">75€ / jour</h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="card-pool">
+              <img src="https://www.homestratosphere.com/wp-content/uploads/2018/09/backyard-swimming-pool-picture2018-09-12-at-10.31.31-AM-11.jpg", height="200px">
+            <div class="card-pool-infos">
+              <div>
+                <div>
+                  <h2>Super piscine dans beau jardin arboré</h2>
+                  <p><i class="far fa-user"></i> Francis P.</p>
+                </div>
+                <h3 class="card-pool-price">75€ / jour</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="card-pool">
+              <img src="https://www.homestratosphere.com/wp-content/uploads/2018/09/backyard-swimming-pool-picture2018-09-12-at-10.31.31-AM-11.jpg", height="200px">
+            <div class="card-pool-infos">
+              <div>
+                <div>
+                  <h2>Super piscine dans beau jardin arboré</h2>
+                  <p><i class="far fa-user"></i> Francis P.</p>
+                </div>
+                <h3 class="card-pool-price">75€ / jour</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="card-pool">
+              <img src="https://www.homestratosphere.com/wp-content/uploads/2018/09/backyard-swimming-pool-picture2018-09-12-at-10.31.31-AM-11.jpg", height="200px">
+            <div class="card-pool-infos">
+              <div>
+                <div>
+                  <h2>Super piscine dans beau jardin arboré</h2>
+                  <p><i class="far fa-user"></i> Francis P.</p>
+                </div>
+                <h3 class="card-pool-price">75€ / jour</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <!-- Change the token below (https://www.mapbox.com/account/access-tokens/) -->
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFlbGRlZyIsImEiOiJjanZyeDdtMGYwa3ltM3ptc3R2MjloMWswIn0.E9IZMA4kM2LWK1qTg8Tb7A'>
+    </div>
