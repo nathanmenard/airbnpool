@@ -11,3 +11,145 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  background: #F4F4F4;
+}
+p {
+  font-weight: lighter;
+}
+h1, h2, h3 {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 23px;
+}
+
+.padded {
+  padding: 30px 0;
+}
+
+.container {
+  display: flex;
+}
+
+.cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+// .card-pool {
+//   background-size: cover;
+//   background-position: center;
+//   height: 150px;
+//   border-radius: 1px;
+//   margin: 15px 10px;
+//   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   font-size: 22px;
+//   color: white;
+//   font-weight: bolder;
+//   text-shadow: 0 0 10px rgba(0,0,0,0.7);
+// }
+
+.container a {
+  text-decoration: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.card-pool {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-pool > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-pool h2 {
+  font-size: 16px;
+  margin: 2;
+}
+
+.card-pool h3 {
+  font-size: 14px;
+  text-align: right;
+  margin: 2;
+}
+
+.card-pool p {
+  font-size: 14px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-pool .card-pool-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+/* We just give you a Gmaps with random width/height */
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
