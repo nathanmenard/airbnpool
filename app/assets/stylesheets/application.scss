@@ -12,36 +12,42 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-  margin: 0;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 18px;
-  background: #F4F4F4;
-}
-p {
-  font-weight: lighter;
-}
-h1, h2, h3 {
-  font-family: 'Varela Round', sans-serif;
-  font-weight: bold;
-}
-h1 {
-  font-size: 30px;
-}
-h2 {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-h3 {
-  font-size: 23px;
-}
+// body {
+//   margin: 0;
+//   font-family: 'Varela Round', sans-serif;
+//   font-size: 18px;
+//   background: #F4F4F4;
+// }
+// p {
+//   font-weight: lighter;
+// }
+// h1, h2, h3 {
+//   font-family: 'Varela Round', sans-serif;
+//   font-weight: bold;
+// }
+// h1 {
+//   font-size: 30px;
+// }
+// h2 {
+//   font-size: 25px;
+//   margin-bottom: 20px;
+// }
+// h3 {
+//   font-size: 23px;
+// }
 
-.padded {
-  padding: 30px 0;
-}
+// .padded {
+//   padding: 30px 0;
+// }
 
-.container {
+// .container {
+//   display: flex;
+// }
+
+.container_show {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .cards {
@@ -105,6 +111,19 @@ h3 {
   margin: 0;
 }
 
+.card-pool-show > {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container-show > {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 
 .card-pool .card-pool-infos {
   padding: 16px;
@@ -152,4 +171,63 @@ h3 {
   #map {
     display: block;
   }
+}
+
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.banner h2 {
+  font-size: 30px;
+  opacity: .8;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// .price-area {
+//   background-color: lightgrey;
+// }
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 15px;
+}
+
+.card > img {
+ height: 300px;
+ width: 100%;
+ object-fit: cover;
+}
+
+.card h3 {
+  text-align: right;
+  font-weight: bold;
+  color: #07A0F2;
 }
