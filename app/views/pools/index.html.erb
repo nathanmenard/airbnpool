@@ -1,0 +1,19 @@
+<div class='container'>
+  <h1>Discover plenty of amazing pools</h1>
+  <div class='cards'>
+    <% @pools.each do |pool|  %>
+      <div class="card-pool">
+        <%= link_to pool_path(pool) do %>
+          <img src="https://www.homestratosphere.com/wp-content/uploads/2018/09/backyard-swimming-pool-picture2018-09-12-at-10.31.31-AM-11.jpg", height="200px">
+        <% end %>
+        <div class="card-pool-infos">
+          <div>
+            <h2><%= pool.title.capitalize %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
