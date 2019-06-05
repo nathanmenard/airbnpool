@@ -22,6 +22,12 @@
         </div>
         <div class="modal-body">
           <%= render 'bookings/form', booking: @booking, pool: @pool %>
+          <%= %>
+         <!--  starting_date_booking1 = DateTime.now + 3
+          ending_date_booking1 = DateTime.now + 4
+          duration_booking1 = (ending_date_booking1 - starting_date_booking1).to_i
+          total_price_booking1 = duration_booking1 * nathan_pool.daily_price
+          booking1 = Booking.create!(user: nicolas, pool: nathan_pool, starting_date: starting_date_booking1, ending_date: ending_date_booking1, total_price: total_price_booking1) -->
         </div>
       </div>
     </div>
@@ -33,11 +39,10 @@
     <div class="row">
       <div class="col-7">
         <h3>Pool description</h3>
+        <p><i class="fas fa-users"></i> <%= @pool.capacity %> people <br>
+        <i class="fas fa-fire"></i> <%= @pool.heated ? 'Yes' : 'No'  %>
+        </p>
         <p><%= @pool.description %> lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <ul>
-          <li><i class="fas fa-users"></i> Capacity: </li>
-          <li><i class="fas fa-fire"></i> Heated: <%= @pool.heated ? 'Yes' : 'No'  %></li>
-        </ul>
       </div>
       <div class="col-5">
         <div class="price-card">
@@ -49,7 +54,6 @@
     </div>
   </div>
 </div>
-
 <!-- /pool info -->
 
 
@@ -69,12 +73,4 @@
       </div>
     </div> -->
 
-
-
-
   <!-- <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFlbGRlZyIsImEiOiJjanZyeDdtMGYwa3ltM3ptc3R2MjloMWswIn0.E9IZMA4kM2LWK1qTg8Tb7A'> -->
-
-
-
-
-

@@ -38,27 +38,34 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  max-height: 320px;
+  height: 380px;
+  // max-height: 350px;
+  // max-width: 300px;
 }
 
-.card-pool > img {
-  height: 300px;
+.card-pool img {
+  height: 250px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-pool h2 {
   font-size: 16px;
-  margin: 2;
+  margin-bottom: 25px;
 }
 
 .card-pool h3 {
   font-size: 14px;
-  text-align: right;
+  // text-align: right;
   margin: 2;
+  right: 10%;
+  position: absolute;
 }
 
 .card-pool p {
+  bottom: 0%;
+  right: 10%;
+  position: absolute;
   font-size: 14px;
   opacity: .7;
   margin: 0;
@@ -66,19 +73,19 @@
 
 
 .card-pool .card-pool-infos {
-  padding: 16px;
+  padding:  5px 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
 }
 
-.card-pool .card-pool-infos p {
-  text-align: right;
-}
+// .card-pool .card-pool-infos p {
+//   text-align: right;
+// }
 
 .card-pool .card-pool-infos h3 {
-  text-align: right;
+  // text-align: right;
   color: #07A0F2;
   font-size: 18px;
 }
