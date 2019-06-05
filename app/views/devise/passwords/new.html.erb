@@ -11,8 +11,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+    <%= f.button :submit, "Send me reset password instructions", class: "btn btn-primary" %>
   </div>
 <% end %>
+<br>
+<%= link_to "Sign up", new_user_session_path, class: "btn btn-secondary" %>
+<%= link_to "Sign in", new_user_session_path, class: "btn btn-secondary" %>
 
-<%= render "devise/shared/links" %>
+
