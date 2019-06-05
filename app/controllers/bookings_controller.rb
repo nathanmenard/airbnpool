@@ -8,9 +8,11 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to pool_path(@pool)
     else
-      render :new
+      render 'pools/show'
     end
   end
+
+  #def calcul total_price
 
   private
 
