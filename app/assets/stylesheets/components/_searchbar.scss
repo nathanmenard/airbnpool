@@ -5,29 +5,30 @@ height: 60px;
 background-color: white;
 border-radius: 30px;
 padding: 10px;
+width: 500px;
 }
 
 .search_input{
+padding: 0 10px;
 color: black;
 border: 0;
 outline: 0;
 background: none;
-width: 0;
+// width: 0;
 caret-color:transparent;
 line-height: 40px;
 transition: width 0.4s linear;
 }
 
 .searchbar:hover > .search_input{
-padding: 0 10px;
-width: 450px;
+// padding: 0 10px;
+width: 400px;
 caret-color:#07A0F2;
-transition: width 0.4s linear;
 }
 
 .searchbar:hover > .search_icon{
-background: white;
-color: #0172aa;
+background: #07A0F2;
+color: white;
 }
 
 .search_icon{
