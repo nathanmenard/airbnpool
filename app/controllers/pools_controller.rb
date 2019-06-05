@@ -1,6 +1,10 @@
 class PoolsController < ApplicationController
   def index
-    @pools = Pool.all
+    if params[:query].present?
+      @pools = Pool.where(address: params[:query])
+    else
+      @pools = Pool.all
+    end
   end
 
   def show
