@@ -1,0 +1,68 @@
+.pool-banner {
+ background-size: cover;
+ background-position: center;
+ padding: 150px 0;
+ color: white;
+ text-align: center;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.pool-banner h1 {
+ margin: 0;
+ font-size: 42px;
+ font-weight: bold;
+}
+
+.pool-banner h2 {
+ font-size: 30px;
+ opacity: .8;
+}
+
+.pool-banner p {
+ font-size: 20px;
+ color: white;
+ opacity: .7;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// .price-area {
+//   background-color: lightgrey;
+// }
+
+.price-card {
+ position: relative;
+ display: -ms-flexbox;
+ display: flex;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ min-width: 0;
+ word-wrap: break-word;
+ background-color: #fff;
+ background-clip: border-box;
+ border: 1px solid rgba(0,0,0,.125);
+ border-radius: .25rem;
+ margin-bottom: 15px;
+}
+
+.price-card > img {
+height: 300px;
+width: 100%;
+object-fit: cover;
+}
+
+.price-card h3 {
+ text-align: right;
+ font-weight: bold;
+ font-size: 35px;
+ color: #07A0F2;
+ padding-top: 15px;
+}
+
+ul {
+list-style-type: none;
+}
+
+.modal_title h5 {
+  font-size: 18px !important;
+  color: #07A0F2 !important;
+}
