@@ -7,7 +7,7 @@
     <% @pools.each do |pool|  %>
       <div class="card-pool">
         <%= link_to pool_path(pool) do %>
-          <%= cl_image_tag pool.picture, height: 200, crop: :fill %>
+          <%= cl_image_tag pool.picture, height: 200 %>
         <% end %>
         <div class="card-pool-infos">
           <div>
