@@ -1,37 +1,67 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.desktop-background.com/download/1600x900/2014/02/23/721587_swimming-pool-backgrounds-imgmob_1800x1200_h.jpg);">
+<div class="pool-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.desktop-background.com/download/1600x900/2014/02/23/721587_swimming-pool-backgrounds-imgmob_1800x1200_h.jpg);">
 
   <div class="container">
-
     <h1><%= @pool.title %></h1>
     <h2>Offered by <%= @pool.user.first_name %></h2>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Book this pool
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          INSERT SIMPLE_FORM CODE HERE
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
 
-<!-- restaurant info -->
+<!-- pool info -->
+
+<!-- test-expression ? if-true-expression : if-false-expression -->
 
 <div class="bg-white">
   <div class="container p-3">
     <div class="row">
-      <div class="col-5">
+      <div class="col-7">
         <h3>Pool description</h3>
         <p><%= @pool.description %> lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <ul>
+          <li><i class="fas fa-users"></i> Capacity: </li>
+          <li><i class="fas fa-fire"></i> Heated: <%= @pool.heated ? 'Yes' : 'No'  %></li>
+        </ul>
       </div>
-      <div class="col-7">
-        <div class="card">
+      <div class="col-5">
+        <div class="price-card">
           <%= cl_image_tag @pool.picture, height: 300, width: 400, crop: :fill %>
-          <div class="card-body">
-          <h3 class="card-title"><%= @pool.daily_price %>€ / day</h3>
-          <a href="#" class="btn btn-primary">Book this pool</a>
+        <div class="price-card-body">
+          <h3 class="price-card-title"><%= @pool.daily_price %>€ / day</h3>
         </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- /restaurant info -->
+<!-- /pool info -->
 
 
-<div class="container_show">
+<!-- <div class="container_show">
   <div class="card-pool-show">
     <h2><%= @pool.title %></h2>
    <img src="https://media.istockphoto.com/photos/swimming-pool-picture-id1064968416">
@@ -45,14 +75,14 @@
       <div>
         <a class="btn btn-primary" href="#">I'm booking this pool !</a>
       </div>
-    </div>
+    </div> -->
 
 
 
 
-  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFlbGRlZyIsImEiOiJjanZyeDdtMGYwa3ltM3ptc3R2MjloMWswIn0.E9IZMA4kM2LWK1qTg8Tb7A'>
+  <!-- <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFlbGRlZyIsImEiOiJjanZyeDdtMGYwa3ltM3ptc3R2MjloMWswIn0.E9IZMA4kM2LWK1qTg8Tb7A'> -->
 
-</div>
+
 
 
 
