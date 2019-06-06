@@ -15,20 +15,23 @@
 @import "pools/show";
 
 @import "components/searchbar";
+@import "components/button";
 
 body {
   margin: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-size: 18px;
   background: #F4F4F4;
+  color: #4A4A4A;
 }
 p {
-  font-weight: lighter;
+  color: #4A4A4A;
 }
 h1, h2, h3 {
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   padding: 10px 0px 10px 0px;
+  color: #4A4A4A;
 }
 
 h1 {
