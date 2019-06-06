@@ -59,7 +59,7 @@ object-fit: cover;
 
 .price-card h3 {
   padding-right: 10px;
- text-align: right;
+  text-align: right;
  font-weight: bold;
  font-size: 25px;
  color: #07A0F2;
@@ -129,6 +129,29 @@ list-style-type: none;
   padding: 12.5px;
 }
 
+.modal-title {
+  font-size: 25px;
+  color: #07A0F2;
+  padding: 0;
+}
+
+.modal-price-info {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 0px 0px 0px 15px;
+  margin: 0px;
+  .fas {
+    color: #07A0F2;
+  }
+}
+
+#add-dates {
+  font-style: italic;
+  font-size: 16px;
+  padding: 0px 0px 0px 15px;
+  margin: 0;
+}
 
 
 
