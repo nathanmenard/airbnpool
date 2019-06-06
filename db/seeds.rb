@@ -15,7 +15,7 @@ cecile = User.create!(email: 'cecile@gmail.com', password: "secret", first_name:
 pierre = User.create!(email: 'pierre@gmail.com', password: "secret", first_name: 'Pierre', last_name: 'Facq')
 guillaume = User.create!(email: 'guillaume@gmail.com', password: "secret", first_name: 'Guillaume', last_name: 'Cabanel')
 
-description_lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit anim id est laborum."
+description_lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 nathan_pool = Pool.create!(user: nathan, address: 'Rennes', capacity: 15, title: 'A pool for all your family', description: description_lorem, heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/piscine1.jpg')), daily_price: 15)
 maella_pool = Pool.create!(user: maella, address: 'Paris', capacity: 10, title: 'A great pool closed to the forest', description: description_lorem, heated: true, picture: File.open(Rails.root.join('db/fixtures/pools/pool.jpg')), daily_price: 20)
