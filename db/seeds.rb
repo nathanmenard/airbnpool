@@ -51,4 +51,6 @@ booking4 = Booking.create!(user: nathan, pool: valentin_pool, starting_date: Dat
 booking5 = Booking.create!(user: nathan, pool: aristide_pool, starting_date: Date.new(2019,1,1), ending_date: Date.new(2019,1,2))
 booking6 = Booking.create!(user: nathan, pool: pierre_pool, starting_date: Date.new(2019,2,11), ending_date: Date.new(2019,2,13))
 
+booking7 = Booking.create!(user: simon, pool: guillaume_pool, starting_date: Date.new(2019,6,29), ending_date: Date.new(2019,6,30))
+booking8 = Booking.create!(user: maxime, pool: maella_pool, starting_date: Date.new(2019,5,20), ending_date: Date.new(2019,6,22))
 puts "seeds ok"
