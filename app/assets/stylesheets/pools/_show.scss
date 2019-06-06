@@ -1,7 +1,7 @@
 .pool-banner {
  background-size: cover;
  background-position: center;
- padding: 150px 0;
+ padding: 200px 0;
  color: white;
  text-align: center;
  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -9,7 +9,9 @@
 
 .pool-banner h1 {
  margin: 0;
+ color: white;
  font-size: 42px;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
  font-weight: bold;
 }
 
@@ -52,6 +54,7 @@ padding: 2px;
 height: 300px;
 width: 100%;
 object-fit: cover;
+
 }
 
 .price-card h3 {
@@ -66,5 +69,70 @@ object-fit: cover;
 ul {
 list-style-type: none;
 }
+
+.notification {
+  display: flex;
+  align-items: center;
+  background: white;
+  // padding: 8px;
+  // border: 1px solid rgb(235,235,235);
+}
+
+.notification .notification-content {
+  flex-grow: 1;
+  // padding: 0 ;
+}
+
+.notification p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.notification small {
+  color: #999999;
+  font-weight: bold;
+}
+
+.notification-content {
+  h3 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.infos {
+  margin-top: 25px;
+  .p-description {
+    margin-top: 35px;
+    font-weight: 400;
+  }
+  .fas {
+    color: #07A0F2;
+  }
+  p {
+    font-weight: bold;
+  }
+  .book-btn {
+    margin-top: 15px;
+  }
+}
+
+.description {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  // shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  padding: 12.5px;
+}
+
+
+
+
+
+
 
 
