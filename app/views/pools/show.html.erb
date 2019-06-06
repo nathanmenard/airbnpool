@@ -20,14 +20,13 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        <div class="modal-price-info" id="PriceInfo">
+          <p>Daily rate is : <span id="modal-daily-price"><%= @pool.daily_price %></span>€</p>
+          <p>Add dates for custom rate</p>
+          <p><span id="total-price">--</span>€</p>
+        </div>
         <div class="modal-body">
           <%= render 'bookings/form', booking: @booking, pool: @pool %>
-          <%= %>
-         <!--  starting_date_booking1 = DateTime.now + 3
-          ending_date_booking1 = DateTime.now + 4
-          duration_booking1 = (ending_date_booking1 - starting_date_booking1).to_i
-          total_price_booking1 = duration_booking1 * nathan_pool.daily_price
-          booking1 = Booking.create!(user: nicolas, pool: nathan_pool, starting_date: starting_date_booking1, ending_date: ending_date_booking1, total_price: total_price_booking1) -->
         </div>
       </div>
     </div>
