@@ -1,13 +1,5 @@
-<div class="pool-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.desktop-background.com/download/1600x900/2014/02/23/721587_swimming-pool-backgrounds-imgmob_1800x1200_h.jpg);">
-
-  <div class="container">
-    <h1><%= @pool.title %></h1>
-    <h2>Offered by <%= @pool.user.first_name %></h2>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-      Book this pool
-    </button>
-  </div>
+<div class="pool-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @pool.picture %>);">
+  <h1>Welcome to <%= @pool.user.first_name %>'s pool</h1>
 </div>
 
   <!-- Modal -->
@@ -22,12 +14,6 @@
         </div>
         <div class="modal-body">
           <%= render 'bookings/form', booking: @booking, pool: @pool %>
-          <%= %>
-         <!--  starting_date_booking1 = DateTime.now + 3
-          ending_date_booking1 = DateTime.now + 4
-          duration_booking1 = (ending_date_booking1 - starting_date_booking1).to_i
-          total_price_booking1 = duration_booking1 * nathan_pool.daily_price
-          booking1 = Booking.create!(user: nicolas, pool: nathan_pool, starting_date: starting_date_booking1, ending_date: ending_date_booking1, total_price: total_price_booking1) -->
         </div>
       </div>
     </div>
@@ -37,40 +23,38 @@
 <div class="bg-white">
   <div class="container p-3">
     <div class="row">
+
       <div class="col-7">
-        <h3>Pool description</h3>
-        <p><i class="fas fa-users"></i> <%= @pool.capacity %> people <br>
-        <i class="fas fa-fire"></i> <%= @pool.heated ? 'Yes' : 'No'  %>
-        </p>
-        <p><%= @pool.description %></p>
+
+        <div class="description">
+          <!-- Title + infos + userimg -->
+          <div class="notification pt-2 pb-2">
+            <div class="notification-content">
+              <h3><%= @pool.title %></h3>
+              <p> <small><%= @pool.address %></small></p>
+            </div>
+            <img src= <%= @pool.user.profile_picture %>, class="avatar-large"/>
+          </div>
+          <!-- /////////// -->
+          <div class="infos">
+            <p><i class="fas fa-users"></i> <%= @pool.capacity %> people <br>
+            <i class="fas fa-fire"></i> <%= @pool.heated ? 'Yes' : 'No'  %>
+            </p>
+            <p class="p-description"><%= @pool.description %></p>
+            <%= link_to "Book now", pools_path, class: "book-btn" %>
+          </div>
+        </div>
       </div>
+
       <div class="col-5">
         <div class="price-card">
           <%= cl_image_tag @pool.picture, height: 300, width: 400, crop: :fill %>
         <div class="price-card-body">
           <h3 class="price-card-title"><%= @pool.daily_price %>€ / day</h3>
         </div>
+
       </div>
     </div>
   </div>
 </div>
-<!-- /pool info -->
 
-
-<!-- <div class="container_show">
-  <div class="card-pool-show">
-    <h2><%= @pool.title %></h2>
-   <img src="https://media.istockphoto.com/photos/swimming-pool-picture-id1064968416">
-    <div class="card-trip-infos">
-      <div>
-        <p><%= @pool.description %></p>
-      </div>
-      <div>
-        <h2 class="card-trip-pricing"><%= @pool.daily_price %>€</h2>
-      </div>
-      <div>
-        <a class="btn btn-primary" href="#">I'm booking this pool !</a>
-      </div>
-    </div> -->
-
-  <!-- <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibWFlbGRlZyIsImEiOiJjanZyeDdtMGYwa3ltM3ptc3R2MjloMWswIn0.E9IZMA4kM2LWK1qTg8Tb7A'> -->
