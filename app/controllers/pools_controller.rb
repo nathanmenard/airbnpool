@@ -5,6 +5,16 @@ class PoolsController < ApplicationController
     else
       @pools = Pool.all
     end
+
+    @pools = Pool.where.not(latitude: nil, longitude: nil)
+
+    @markers = @pools.map do |pool|
+      {
+        lat: pool.latitude,
+        lng: pool.longitude
+      }
+
+    end
   end
 
   def show

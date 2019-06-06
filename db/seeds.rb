@@ -25,7 +25,7 @@ maxime_pool = Pool.create!(user: maxime, address: 'Rennes', capacity: 17, title:
 aristide_pool = Pool.create!(user: aristide, address: 'Paris', capacity: 20, title: 'In Paris, come on and enjoy my pool', description: description_lorem, heated: true, picture: File.open(Rails.root.join('db/fixtures/pools/piscine5.jpg')), daily_price: 12)
 cecile_pool = Pool.create!(user: cecile, address: 'Rennes', capacity: 10, title: 'Closed to Rennes, a great pool', description: description_lorem, heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/piscine6.jpg')), daily_price: 30)
 pierre_pool = Pool.create!(user: pierre, address: 'Paris', capacity: 5, title: 'A nice pool, near the mountain', description: description_lorem, heated: true, picture: File.open(Rails.root.join('db/fixtures/pools/piscine7.jpg')), daily_price: 18)
-pierre_pool = Pool.create!(user: guillaume, address: 'Rennes', capacity: 11, title: 'Have a nice day, with a nice pool', description: description_lorem, heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/piscine8.jpg')), daily_price: 21)
+pierre_pool = Pool.create!(user: guillaume, address: '27 rue Frédéric Bazille, Saint-Malo', capacity: 11, title: 'Have a nice day, with a nice pool', description: description_lorem, heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/piscine8.jpg')), daily_price: 21)
 
 
 
