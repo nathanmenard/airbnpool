@@ -27,6 +27,7 @@ cecile_pool = Pool.create!(user: cecile, address: '1 boulevard de la duchesse an
 pierre_pool = Pool.create!(user: pierre, address: '101 rue de l universite, Paris', capacity: 5, title: 'A nice pool, near the city', description: description_lorem, heated: true, picture: File.open(Rails.root.join('db/fixtures/pools/piscine7.jpg')), daily_price: 18)
 guillaume_pool = Pool.create!(user: guillaume, address: '23 boulevard Charles Péguy, Rennes', capacity: 11, title: 'Have a nice day, with a nice pool', description: description_lorem, heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/pool3.jpg')), daily_price: 21)
 
+
 starting_date_booking1 = DateTime.now + 3
 ending_date_booking1 = DateTime.now + 4
 duration_booking1 = (ending_date_booking1 - starting_date_booking1).to_i
