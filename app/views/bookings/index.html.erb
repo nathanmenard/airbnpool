@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Your next ploofs</h1>
+  <% current_user %>
+  <% if current_user.bookings.nil? %>
+    <h3>You didn't book any pool yet :'(</h3>
+
+  <% else %>
+    <% if @next_ploofs.nil? %>
+      <h3>No ploof to come :'(</h3>
+
+    <% else %>
+      <% current_user.bookings.each do |booking| %>
+        <% if DateTime.now.to_date < booking.starting_date%>
+          <%= render 'shared/history_card', booking: booking %>
+        <% end %>
+
+      <% end %>
+
+    <% end %>
+
+  <% end %>
+  <%= @past_ploofs %>
+</div>
+
