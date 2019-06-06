@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Your next ploofs</h1>
+  <% if current_user.bookings.empty? %>
+    <h3>You didn't book any pool yet :'(</h3>
+
+  <% else %>
+    <% if @next_ploofs.empty? %>
+      <h3>No ploof to come :'(</h3>
+
+    <% else %>
+      <% current_user.bookings.each do |booking| %>
+        <% if DateTime.now.to_date < booking.starting_date%>
+          <div class="card-product">
+            <img src= <%= booking.pool.picture %> >
+            <div class="card-product-infos">
+              <h2><%= booking.pool.title %></h2>
+              <p>Product description with <strong>relevant info</strong> only.</p>
+            </div>
+          </div>
+        <% end %>
+
+      <% end %>
+
+    <% end %>
+
+  <% end %>
+</div>
+

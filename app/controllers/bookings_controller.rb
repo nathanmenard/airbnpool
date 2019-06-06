@@ -12,6 +12,19 @@ class BookingsController < ApplicationController
     end
   end
 
+  def index
+    @next_ploofs = []
+    @past_ploofs = []
+
+    current_user.bookings.each do |booking|
+      if DateTime.now.to_date < booking.starting_date
+        @next_ploofs << booking
+      else
+        @past_ploofs << booking
+      end
+    end
+  end
+
   #def calcul total_price
 
   private
