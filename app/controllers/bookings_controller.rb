@@ -26,6 +26,33 @@ class BookingsController < ApplicationController
         @past_ploofs << booking
       end
     end
+    @booking_enquiries = Booking.joins(:pool).where("pools.user_id = ?", current_user)
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_status: 'accepted')
+
+    if @booking.booking_status == 'accepted'
+      flash[:success] = 'Booking has been accepted'
+      redirect_to bookings_path
+    else
+      flash[:error] = 'Oops! Something went wrong...'
+      redirect_to bookings_path
+   end
+  end
+
+  def decline
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_status: 'declined')
+
+    if @booking.booking_status == 'declined'
+      flash[:success] = 'Booking has been declined'
+      render 'bookings/index'
+    else
+      flash[:error] = 'Oops! Something went wrong...'
+      render 'bookings/index'
+    end
   end
 
   private
