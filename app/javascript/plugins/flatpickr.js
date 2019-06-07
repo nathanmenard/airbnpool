@@ -33,3 +33,5 @@ flatpickr(".datepicker", {
   minDate: "today",
   onChange: getTotalPrice,
 })
+
+// useless comment
