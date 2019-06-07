@@ -12,13 +12,13 @@ valentin = User.create!(email: 'valentin@gmail.com', password: "secret", first_n
 maxime = User.create!(email: 'maxime@gmail.com', password: "secret", first_name: 'Maxime', last_name: 'Le Menaheze', profile_picture: 'https://avatars0.githubusercontent.com/u/49006065?s=460&v=4')
 aristide = User.create!(email: 'aristide@gmail.com', password: "secret", first_name: 'Aristide', last_name: 'Riou', profile_picture: 'https://avatars0.githubusercontent.com/u/48838468?s=460&v=4')
 cecile = User.create!(email: 'cecile@gmail.com', password: "secret", first_name: 'Cecile', last_name: 'Veneziani', profile_picture: 'https://avatars0.githubusercontent.com/u/50518?s=460&v=4')
-pierre = User.create!(email: 'pierre@gmail.com', password: "secret", first_name: 'Pierre', last_name: 'Facq', profile_picture: 'https://avatars0.githubusercontent.com/u/14109103?s=460&v=4')
+pierre = User.create!(email: 'pierre@gmail.com', password: "secret", first_name: 'Pierre', last_name: '<Fa></Fa>cq', profile_picture: 'https://avatars0.githubusercontent.com/u/14109103?s=460&v=4')
 guillaume = User.create!(email: 'guillaume@gmail.com', password: "secret", first_name: 'Guillaume', last_name: 'Cabanel', profile_picture: 'https://avatars1.githubusercontent.com/u/2414369?s=400&v=4')
 nfilzi = User.create!(email: 'nicolas@gmail.com', password: "secret", first_name: 'Nicolas', last_name: 'Filzi', profile_picture: 'https://avatars0.githubusercontent.com/u/7533706?s=460&v=4')
 spiderman = User.create!(email: 'spiderman@gmail.com', password: "secret", first_name: 'Spider', last_name: 'Man', profile_picture: 'https://avatarfiles.alphacoders.com/149/thumb-149117.jpg')
 mike = User.create!(email: 'mike@gmail.com', password: "secret", first_name: 'Mike', last_name: 'Tyson', profile_picture: 'https://www.avatarys.com/downloadfullsize/send/10230')
 
-description_lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+description_lorem = "I have everything you need: BBQ, sun umbrella, buoys... Of course, you can bring as many friends as you'd like! So see you in my pool ;)"
 
 nathan_pool = Pool.create!(user: nathan, city: "Nantes", address: '3 rue de Verdun, Nantes', capacity: 15, title: 'A pool for all your family', description: description_lorem, heated: false, picture: File.open(Rails.root.join('db/fixtures/pools/piscine1.jpg')), daily_price: 15)
 nicolas_pool = Pool.create!(user: nicolas, city: "Paris", address: '55 rue du Faubourg Saint-Honoré, Paris', capacity: 10, title: 'A great pool close to the forest', description: description_lorem, heated: true, picture: File.open(Rails.root.join('db/fixtures/pools/pool.jpg')), daily_price: 20)
