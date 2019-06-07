@@ -1,32 +1,63 @@
-.card-product {
+.history-card {
   overflow: hidden;
-  height: 120px;
+  height: 190px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 
-.card-product img {
+.history-card img {
   height: 100%;
-  width: 120px;
+  width: 50%;
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
+.history-card h2 {
+  font-size: 30px;
   font-weight: bold;
-  margin: 0;
+  margin: 15px 0 0 0;
 }
 
-.card-product p {
-  font-size: 12px;
+.history-card p {
+  font-size: 20px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.history-card-infos {
   padding: 16px;
+  position:relative;
+  width: 50%;
+  // width: 100%;
+}
+
+
+.status-container {
+  text-align: right;
+
+  .status {
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .accepted {
+    background-color: #4CAF50;
+  }
+
+  .pending {
+    background-color: #999999;
+  }
+
+  .declined {
+    background-color: #ce3429;
+  }
 }
