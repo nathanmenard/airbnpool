@@ -2,11 +2,11 @@
   <img src= <%= booking.pool.picture %> >
   <div class="history-card-infos">
     <h2><%= booking.pool.title %></h2>
-    <p><%= booking.starting_date.strftime("%d/%m/%Y") %> - <%= booking.ending_date.strftime("%d/%m/%Y") %></p>
+    <h3><%= booking.starting_date.strftime("%d/%m/%Y") %> - <%= booking.ending_date.strftime("%d/%m/%Y") %></h3>
     <% if current_user == booking.pool.user %>
       <p><i class="far fa-user"></i> <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %></p>
     <% else %>
-      <p><%= booking.pool.city %></p>
+      <h3><i class="fas fa-map-marker-alt"></i> <%= booking.pool.city %></h3>
       <p><i class="far fa-user"></i> <%= booking.pool.user.first_name.capitalize %> <%= booking.pool.user.last_name.capitalize %></p>
     <% end %>
 
