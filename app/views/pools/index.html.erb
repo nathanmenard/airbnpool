@@ -1,8 +1,4 @@
-<!-- <div class = "container">
-  <h1>Discover plenty of amazing pools</h1>
-</div> -->
-
-    <div class="card-container">
+<div class="card-container">
       <div class="cards">
         <% @pools.each do |pool|  %>
           <div class="card-pool">
@@ -30,5 +26,4 @@
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
-
 </div>
