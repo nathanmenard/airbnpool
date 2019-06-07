@@ -1,27 +1,50 @@
 <div class="container">
-  <% current_user %>
-  <% if current_user.bookings.nil? %>
-    <h3>You didn't book any pool yet :'(</h3>
 
-  <% else %>
-    <h1>Your next ploofs</h1>
-      <% if @next_ploofs.empty? %>
-        <h3>No ploof to come :'(</h3>
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-default-tab" data-toggle="pill" href="#pills-default" role="tab" aria-controls="pills-home" aria-selected="true">Your ploofs</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-enquiries-tab" data-toggle="pill" href="#pills-enquiries" role="tab" aria-controls="pills-profile" aria-selected="false">Your booking enquiries</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-default" role="tabpanel" aria-labelledby="pills-default-tab">
+      <% current_user %>
+      <% if current_user.bookings.nil? %>
+        <h4>You didn't book any pool yet :'(</h4>
+
       <% else %>
-        <% @next_ploofs.each do |booking| %>
+        <h1>Next ploofs</h1>
+          <% if @next_ploofs.empty? %>
+            <h4>No ploof to come :'(</h4>
+          <% else %>
+            <% @next_ploofs.each do |booking| %>
+              <%= render 'shared/history_card', booking: booking %>
+            <% end %>
+          <% end %>
+
+        <h1>Past ploofs</h1>
+          <% if @past_ploofs.empty? %>
+            <h4>No ploof yet :'(</h4>
+          <% else %>
+            <% @past_ploofs.each do |booking| %>
+              <%= render 'shared/history_card', booking: booking %>
+            <% end %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="pills-enquiries" role="tabpanel" aria-labelledby="pills-enquiries-tab">
+      <% current_user %>
+      <% if @booking_enquiries.empty? %>
+        <h4>No booking enquiries yet :'(</h4>
+      <% else %>
+        <% @booking_enquiries.each do |booking| %>
           <%= render 'shared/history_card', booking: booking %>
         <% end %>
       <% end %>
+    </div>
+  </div>
 
-    <h1>Your past ploofs</h1>
-      <% if @past_ploofs.empty? %>
-        <h3>No ploof yet :'(</h3>
-      <% else %>
-        <% @past_ploofs.each do |booking| %>
-          <%= render 'shared/history_card', booking: booking %>
-        <% end %>
-      <% end %>
-
-  <% end %>
 </div>
 
