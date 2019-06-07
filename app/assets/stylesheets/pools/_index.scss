@@ -6,31 +6,6 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-// .card-pool {
-//   background-size: cover;
-//   background-position: center;
-//   height: 150px;
-//   border-radius: 1px;
-//   margin: 15px 10px;
-//   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   font-size: 22px;
-//   color: white;
-//   font-weight: bolder;
-//   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-// }
-
-.card-container a {
-  text-decoration: none;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
@@ -38,9 +13,17 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 380px;
+  height: 360px;
   // max-height: 350px;
   // max-width: 300px;
+
+  #avatar-img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    top: -20px;
+  }
 }
 
 .card-pool img {
@@ -51,60 +34,53 @@
 
 .card-pool h2 {
   font-size: 16px;
-  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .card-pool h3 {
   font-size: 14px;
   // text-align: right;
   margin: 2;
-  right: 10%;
+  right: 16px;
   position: absolute;
 }
 
 .card-pool p {
   bottom: 0%;
-  right: 10%;
   position: absolute;
   font-size: 14px;
   opacity: .7;
   margin: 0;
 }
 
+.card-pool {
+  .card-pool-infos {
+    padding:  5px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
 
-.card-pool .card-pool-infos {
-  padding:  5px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+    h3 {
+      color: #07A0F2;
+      font-size: 18px;
+    }
+  }
 }
 
-// .card-pool .card-pool-infos p {
-//   text-align: right;
-// }
 
-.card-pool .card-pool-infos h3 {
-  // text-align: right;
-  color: #07A0F2;
-  font-size: 18px;
-}
+///// MAP /////
 
-// #pool-short-description {
-//   text-align: left;
-//   margin-bottom: 20px;
-// }
-
-/* We just give you a Gmaps with random width/height */
 #map {
   height: 100vh;
   position: sticky;
   top: 0;
 }
 
-/*Media Queries*/
 
-/*Smallest device*/
+///// MEDIA /////
+
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
@@ -132,4 +108,8 @@
   #map {
     display: block;
   }
+}
+
+.fa-map-marker-alt {
+  color: #07A0F2;
 }

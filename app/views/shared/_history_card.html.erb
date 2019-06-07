@@ -6,7 +6,6 @@
     <p><%= booking.pool.city %></p>
 
     <div class="status-container">
-
       <% if booking.booking_status == 'accepted'%>
         <h3 class="status accepted"><i class="fas fa-swimming-pool"></i> Accepted<h3>
       <% elsif booking.booking_status == 'declined' %>
@@ -14,7 +13,7 @@
       <% else %>
         <h3 class="status pending"><i class="fas fa-user-clock"></i> Pending<h3>
       <% end %>
-
     </div>
+
   </div>
 </div>
