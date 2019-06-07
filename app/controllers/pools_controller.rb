@@ -1,20 +1,30 @@
 class PoolsController < ApplicationController
   def index
+   @pools = Pool.where.not(latitude: nil, longitude: nil)
+   @pools = Pool.where(city: params[:query])
+
+   @markers = @pools.map do |pool|
+     {
+       lat: pool.latitude,
+       lng: pool.longitude
+     }
+
+   end
+
     if params[:query].present?
-      @pools = Pool.where(address: params[:query])
+      @pools = Pool.where(city: params[:query])
+
     else
       @pools = Pool.all
+      @markers = @pools.map do |pool|
+        {
+          lat: pool.latitude,
+          lng: pool.longitude
+        }
+
+      end
     end
 
-    @pools = Pool.where.not(latitude: nil, longitude: nil)
-
-    @markers = @pools.map do |pool|
-      {
-        lat: pool.latitude,
-        lng: pool.longitude
-      }
-
-    end
   end
 
   def show
@@ -25,6 +35,6 @@ class PoolsController < ApplicationController
   private
 
   def pool_params
-    params.require(:pool).permit(:title, :description, :picture, :address, :latitude, :longitude, :heated, :capacity, :daily_price, :user_id)
+    params.require(:pool).permit(:title, :description, :picture, :address, :city, :latitude, :longitude, :heated, :capacity, :daily_price, :user_id)
   end
 end
