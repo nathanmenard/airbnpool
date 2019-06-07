@@ -3,17 +3,18 @@
   <div class="history-card-infos">
     <h2><%= booking.pool.title %></h2>
     <p><%= booking.starting_date.strftime("%d/%m/%Y") %> - <%= booking.ending_date.strftime("%d/%m/%Y") %></p>
-    <p><%= booking.pool.address.split(",").last %></p>
+    <p><%= booking.pool.city %></p>
 
     <div class="status-container">
 
-      <h3 class="status success"><i class="fas fa-swimming-pool"></i> Accepted<h3>
-
-      <h3 class="status pending"><i class="fas fa-user-clock"></i> Pending<h3>
-
-      <h3 class="status declined"><i class="fas fa-user-times"></i> Declined<h3>
+      <% if booking.booking_status == 'accepted'%>
+        <h3 class="status accepted"><i class="fas fa-swimming-pool"></i> Accepted<h3>
+      <% elsif booking.booking_status == 'declined' %>
+        <h3 class="status declined"><i class="fas fa-user-times"></i> Declined<h3>
+      <% else %>
+        <h3 class="status pending"><i class="fas fa-user-clock"></i> Pending<h3>
+      <% end %>
 
     </div>
-
   </div>
 </div>

@@ -45,12 +45,12 @@ total_price_booking2 = duration_booking2 * maella_pool.daily_price
 # booking1 = Booking.create!(user: nicolas, pool: nathan_pool, starting_date: starting_date_booking1, ending_date: ending_date_booking1, total_price: total_price_booking1)
 # booking2 = Booking.create!(user: nathan, pool: maella_pool, starting_date: starting_date_booking2, ending_date: ending_date_booking2, total_price: total_price_booking2)
 
-booking3 = Booking.create!(user: nathan, pool: simon_pool, starting_date: Date.new(2019,6,20), ending_date: Date.new(2019,6,21))
-booking4 = Booking.create!(user: nathan, pool: valentin_pool, starting_date: Date.new(2019,3,1), ending_date: Date.new(2019,3,2))
+booking3 = Booking.create!(user: nathan, pool: simon_pool, starting_date: Date.new(2019,6,20), ending_date: Date.new(2019,6,21), booking_status: 'pending')
+booking4 = Booking.create!(user: nathan, pool: valentin_pool, starting_date: Date.new(2019,3,1), ending_date: Date.new(2019,3,2), booking_status: 'accepted')
 
-booking5 = Booking.create!(user: nathan, pool: aristide_pool, starting_date: Date.new(2019,1,1), ending_date: Date.new(2019,1,2))
-booking6 = Booking.create!(user: nathan, pool: pierre_pool, starting_date: Date.new(2019,2,11), ending_date: Date.new(2019,2,13))
+booking5 = Booking.create!(user: nathan, pool: aristide_pool, starting_date: Date.new(2019,1,1), ending_date: Date.new(2019,1,2), booking_status: 'declined')
+booking6 = Booking.create!(user: nathan, pool: pierre_pool, starting_date: Date.new(2019,2,11), ending_date: Date.new(2019,2,13), booking_status: 'accepted')
 
-booking7 = Booking.create!(user: simon, pool: guillaume_pool, starting_date: Date.new(2019,6,29), ending_date: Date.new(2019,6,30))
-booking8 = Booking.create!(user: maxime, pool: maella_pool, starting_date: Date.new(2019,5,20), ending_date: Date.new(2019,6,22))
+booking7 = Booking.create!(user: simon, pool: guillaume_pool, starting_date: Date.new(2019,6,29), ending_date: Date.new(2019,6,30), booking_status: 'accepted')
+booking8 = Booking.create!(user: maxime, pool: maella_pool, starting_date: Date.new(2019,5,20), ending_date: Date.new(2019,6,22), booking_status: 'accepted')
 puts "seeds ok"
