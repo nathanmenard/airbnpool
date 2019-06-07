@@ -14,7 +14,7 @@ aristide = User.create!(email: 'aristide@gmail.com', password: "secret", first_n
 cecile = User.create!(email: 'cecile@gmail.com', password: "secret", first_name: 'Cecile', last_name: 'Veneziani', profile_picture: 'https://avatars0.githubusercontent.com/u/50518?s=460&v=4')
 pierre = User.create!(email: 'pierre@gmail.com', password: "secret", first_name: 'Pierre', last_name: 'Facq', profile_picture: 'https://avatars0.githubusercontent.com/u/14109103?s=460&v=4')
 guillaume = User.create!(email: 'guillaume@gmail.com', password: "secret", first_name: 'Guillaume', last_name: 'Cabanel', profile_picture: 'https://avatars1.githubusercontent.com/u/2414369?s=400&v=4')
-nfilzi = User.create!(email: 'nicolas@gmail.com', password: "secret", first_name: 'Guillaume', last_name: 'Cabanel', profile_picture: 'https://avatars0.githubusercontent.com/u/7533706?s=460&v=4')
+nfilzi = User.create!(email: 'nicolas@gmail.com', password: "secret", first_name: 'Nicolas', last_name: 'Filzi', profile_picture: 'https://avatars0.githubusercontent.com/u/7533706?s=460&v=4')
 spiderman = User.create!(email: 'spiderman@gmail.com', password: "secret", first_name: 'Spider', last_name: 'Man', profile_picture: 'https://avatarfiles.alphacoders.com/149/thumb-149117.jpg')
 mike = User.create!(email: 'mike@gmail.com', password: "secret", first_name: 'Mike', last_name: 'Tyson', profile_picture: 'https://www.avatarys.com/downloadfullsize/send/10230')
 
