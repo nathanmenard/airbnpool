@@ -1,0 +1,13 @@
+<%= simple_form_for (@pool) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :picture %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :latitude %>
+  <%= f.input :longitude %>
+  <%= f.input :heated %>
+  <%= f.input :capacity %>
+  <%= f.input :daily_price %>
+  <%= f.submit "add pool", class: "btn btn-primary" %>
+<% end %>
