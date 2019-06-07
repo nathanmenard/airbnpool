@@ -1,26 +1,16 @@
 class PoolsController < ApplicationController
   def index
-    @pools = Pool.where.not(latitude: nil, longitude: nil)
-    @pools = Pool.where(city: params[:query])
-
-    @markers = @pools.map do |pool|
-      {
-        lat: pool.latitude,
-        lng: pool.longitude
-      }
-  end
-
     if params[:query].present?
       @pools = Pool.where(city: params[:query])
+    end
 
-    else
-      @pools = Pool.all
-      @markers = @pools.map do |pool|
-        {
-          lat: pool.latitude,
-          lng: pool.longitude
-        }
-      end
+  @pools = Pool.all if @pools.nil? || @pools.empty?
+
+  @markers = @pools.map do |pool|
+    {
+      lat: pool.latitude,
+      lng: pool.longitude
+    }
     end
   end
 
