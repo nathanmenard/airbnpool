@@ -1,6 +1,6 @@
 .history-card {
   overflow: hidden;
-  height: 190px;
+  height: 230px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -17,11 +17,18 @@
 .history-card h2 {
   font-size: 30px;
   font-weight: bold;
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
+}
+
+.history-card h3 {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: .7;
+  margin: 0;
 }
 
 .history-card p {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
