@@ -1,11 +1,3 @@
-<!-- <div class="card-product">
-  <img src= <%= booking.pool.picture %> >
-  <div class="card-product-infos">
-    <h2><%= booking.pool.title %></h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div> -->
-
 <div class="history-card">
   <img src= <%= booking.pool.picture %> >
   <div class="history-card-infos">
@@ -14,7 +6,7 @@
     <% if current_user == booking.pool.user %>
       <p><i class="far fa-user"></i> <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %></p>
     <% else %>
-      <p><%#= booking.pool.city %></p>
+      <p><%= booking.pool.city %></p>
       <p><i class="far fa-user"></i> <%= booking.pool.user.first_name.capitalize %> <%= booking.pool.user.last_name.capitalize %></p>
     <% end %>
 
@@ -52,14 +44,3 @@
 
   </div>
 </div>
-
-
-    <!-- <div class="status-container">
-      <% if booking.booking_status == 'accepted'%>
-        <h3 class="status accepted"><i class="fas fa-swimming-pool"></i> Accepted<h3>
-      <% elsif booking.booking_status == 'declined' %>
-        <h3 class="status declined"><i class="fas fa-user-times"></i> Declined<h3>
-      <% else %>
-        <h3 class="status pending"><i class="fas fa-user-clock"></i> Pending<h3>
-      <% end %>
-    </div> -->
