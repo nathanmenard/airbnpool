@@ -26,12 +26,8 @@ const getTotalPrice = () => {
   document.getElementById('total-price').innerHTML = totalPrice;
 }
 
-// flatpickr(".datepicker", {})
-
 flatpickr(".datepicker", {
   altInput: true,
   minDate: "today",
   onChange: getTotalPrice,
 })
-
-// useless comment
